@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../shared/user.service';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-user-profile',
@@ -8,7 +9,15 @@ import { Router } from "@angular/router";
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-  userDetails;
+  userDetails: any;
+
+  items = ['First', 'Second', 'Third', 'Fourth'];
+  onDrop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.items, event.previousIndex, event.currentIndex);
+    console.log(this.items);
+  }
+
+
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
