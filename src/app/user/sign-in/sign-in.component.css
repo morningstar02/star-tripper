@@ -1,0 +1,10 @@
+.signin-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+.full-width {
+    min-width: 144px;
+    margin-bottom: auto;
+  }

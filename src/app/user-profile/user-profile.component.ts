@@ -33,7 +33,7 @@ export class UserProfileComponent implements OnInit {
   }
   onLogout(){
     this.userService.deleteToken();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 
 }

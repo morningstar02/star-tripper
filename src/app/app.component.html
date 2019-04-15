@@ -1,1 +1,20 @@
-<router-outlet></router-outlet>
+<app-layout>
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav role="navigation">
+            <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div fxLayout="column" fxLayoutGap="50px">
+                <div>
+                    <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+                </div>
+                <div>
+                        <main>
+                            <router-outlet></router-outlet>
+                        </main>
+                </div>
+            </div>
+        </mat-sidenav-content>
+        <!-- Body -->
+    </mat-sidenav-container>
+</app-layout>

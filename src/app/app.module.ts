@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 
 //components
 import { AppComponent } from './app.component';
@@ -20,6 +23,11 @@ import { appRoutes } from './routes';
 import { UserService } from './shared/user.service';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { MaterialModule } from './material/material.module';
+import { LayoutComponent } from './layout/layout.component';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 
 @NgModule({
@@ -28,7 +36,11 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     UserComponent,
     SignUpComponent,
     UserProfileComponent,
-    SignInComponent
+    SignInComponent,
+    LayoutComponent,
+    HomeComponent,
+    HeaderComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +48,11 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     NgbModule,
-    DragDropModule
+    DragDropModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    FlexLayoutModule,
+    NgScrollbarModule
   ],
   providers: [ UserService, AuthGuard, {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true} ],
   bootstrap: [AppComponent]

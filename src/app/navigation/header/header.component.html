@@ -1,0 +1,16 @@
+<mat-toolbar color="accent" id="navbar">
+    <div fxHide.gt-xs>
+      <button mat-icon-button (click) = "onToggleSidenav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    
+    <div fxFlex fxLayout fxLayoutAlign="space-around start">
+        <div>
+            <a routerLink="/home" style="font-size: 69px; text-decoration: none">swap</a>
+        </div>
+        <div>
+            <app-sign-in></app-sign-in>
+        </div>
+    </div>
+</mat-toolbar>
