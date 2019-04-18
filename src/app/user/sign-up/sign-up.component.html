@@ -1,6 +1,5 @@
-<h2 style="padding-top:4%">Create an account</h2>
-<form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)" class="signup-form" autocomplete="off">
-    <div fxLayout="column" fxLayoutGap="32px">
+<form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)" autocomplete="off">
+    <div fxLayout="column wrap" fxLayoutGap="32px">
       <mat-form-field class="full-width">
         <input matInput type="text" #fullName="ngModel" [(ngModel)]="userService.selectedUser.fullName" name="fullName" placeholder="Full Name"
         required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !fullName.valid }">

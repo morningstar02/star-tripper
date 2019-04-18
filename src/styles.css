@@ -1,6 +1,6 @@
-@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "../node_modules/@angular/material/prebuilt-themes/purple-green.css";
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
-
+@import "https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css";
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 html, body { 
     margin: 0;

@@ -1,0 +1,54 @@
+
+/*
+  config: SwiperOptions = {
+    autoplay: 3000, // Autoplay option having value in milliseconds
+    initialSlide: 1, // Slide Index Starting from 0
+    slidesPerView: 1, // Slides Visible in Single View Default is 1
+    pagination: '.swiper-pagination', // Pagination Class defined
+    paginationClickable: true, // Making pagination dots clicable
+    nextButton: '.swiper-button-next', // Class for next button
+    prevButton: '.swiper-button-prev', // Class for prev button
+    spaceBetween: 30 // Space between each Item
+  };
+  */
+
+  import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatTabChangeEvent } from '@angular/material';
+import { SwiperComponent } from 'angular2-useful-swiper';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
+})
+
+export class HomeComponent implements OnInit {
+  @ViewChild('usefulSwiper') public usefulSwiper: SwiperComponent;
+  tabChangeEvent;
+
+  public images: Array<string> = [
+    '../assets/img/online_shopping.svg',
+  ];
+
+  public config: Object = {
+    spaceBetween: 30,
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 4444,
+      disableOnInteraction: false,
+    },
+  };
+  constructor() { 
+  }
+
+
+  ngOnInit() {
+  }
+
+
+  tabChanged = (tabChangeEvent: MatTabChangeEvent) :void => {
+    console.log('tabChangeEvent => ', tabChangeEvent);
+    console.log('index => ', tabChangeEvent.index);
+  }
+}

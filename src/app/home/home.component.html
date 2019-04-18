@@ -1,12 +1,19 @@
-<div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="space-around start" style="padding:5px">
-  <div>
-    <img
-    width="640"
-    height="480"
-    src="/assets/img/signup.svg" id="icon" alt="User Icon"/>
+<div fxLayout="row wrap" fxLayoutAlign="space-around start">
+  <div class="background">
   </div>
 
-  <div fxLayoutAlign="right">
-    <app-sign-up></app-sign-up>
-  </div>
+  <div class="card">
+      <h3 style="padding-top:4%">Create an account</h3>
+      <div class="container">
+          <app-sign-up></app-sign-up>
+      </div>
+    </div>
+  
+    <div class="card">
+        <h4 style="padding-top:4%">Login</h4>
+        <p style="color: #a5a8ac !important;">Sign In to your account</p>
+        <div class="container">
+            <app-sign-in></app-sign-in>
+        </div>
+      </div>
 </div>
